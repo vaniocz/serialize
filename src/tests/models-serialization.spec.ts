@@ -1,6 +1,4 @@
-import { Field, Model } from '../decorators';
-import { deserialize, serialize } from '../converters';
-import { Name } from '../decorators/name.decorator';
+import { Model, Field, deserialize, serialize, Name } from '../';
 
 @Model()
 class SubModel {

@@ -1,7 +1,4 @@
-import { Field } from '../decorators';
-import { ArraySerializer, ModelSerializer } from '../serializers';
-import { PrimitiveSerializer } from '../serializers/primitive.serializer';
-import { deserialize, serialize } from '../converters';
+import { Field, ArraySerializer, ModelSerializer, PrimitiveSerializer, deserialize, serialize  } from '../';
 
 class TestConfiguration {
   @Field({ serializer: new ArraySerializer(new PrimitiveSerializer()) })

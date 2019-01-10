@@ -1,5 +1,4 @@
-import { Field } from '../decorators';
-import { deserialize, serialize } from '../converters';
+import { Field, deserialize, serialize } from '../';
 
 class TestModel {
   @Field()
