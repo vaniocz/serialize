@@ -1,36 +1,30 @@
 # Serialize TS
 
-Metadata library that created to resolve your pain with all mappers and type-checking of objects after serialization or deserialization.
+## Introduction
+Serialize TS is a tool that can improve the OOP modeling of your Typescript projects.
 
-Don`t use the spread operator for copying of your models because prototypes chain will be lost after it!
+If the answer for someone of them is "true" this library can help your project. In the other case, you can ignore this tool.
+
+- Do you want to have methods inside of your model? 
+- Do you write "mappers"?
+- Do you want to make your logic depends on the model type?
+- Do you have an entity that looks not very nice for you on your APIs? 
+- Do you want to change your model structure in your code, but don't want to write tonnes of boilerplate code?
+
+You can do all of these things with this tool and even more if you are ready to do community work to improve this tool.
 
 ## Getting started
 
 ### Instalation
 
-1. Add a dependency to your package.json file:
-
+1. Install as a dependency to your project:
 `npm install serialize-ts --save` or `yarn add serialize-ts`;
 
-2. Change a tsconfig.json:
+2. Add the `emitDecoratorMetadata: true` to your `compilerOptions` in the `tsconfig.json` if it isn't already there.
 
-```json
+### Examples
 
-{
-    ...
-    compilerOptions: {
-        ...
-        emitDecoratorMetadata: true,
-        ...
-    },
-    ...
-}
-
-```
-
-### Exmaples
-
-#### Serialization
+**Serialization**
 
 Simple model:
 
