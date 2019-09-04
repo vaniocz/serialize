@@ -5,12 +5,23 @@ import { ModelMetadataSerializer } from '../serializers/model-metadata.serialize
 /**
  * Convert model to json with metadata names
  *
- * Fields that not are labeled as {@link Field} will be ignore
+ * Fields that not are marked as {@link Field} will be ignore
  *
- * @param model Serializable model that was convert to json
+ * @param model Serializable model that should be converted to JSON
+ * @param profile optional profile for serialization of your model.
  * @returns Server object
  */
-export function serialize<T>(model: T): Object {
+export function serialize<T, E>(model: T, profile: E): Object;
+/**
+ * Convert model to json with metadata names
+ *
+ * Fields that not are marked as {@link Field} will be ignore
+ *
+ * @param model Serializable model that should be converted to JSON
+ * @returns Server object
+ */
+export function serialize<T>(model: T): Object;
+export function serialize<T, E>(model: T, profile?: E): Object {
   const modelPrototype = Object.getPrototypeOf(model);
   const constructor = modelPrototype.constructor;
   if (SerializersFactory.instance.isSerializerPresent(constructor)) {
