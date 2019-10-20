@@ -38,7 +38,7 @@ jobs:
 
       - attach_workspace:
           at: ~/repo
-      - run: yarn tslint
+      - run: yarn lint
   tests:
     <<: *defaults
 
@@ -92,6 +92,6 @@ workflows:
             - compile
           filters:
             tags:
-              only: /^\d+.\d+.\d+$/
+              only: /^v.*$/
             branches:
               only: master
