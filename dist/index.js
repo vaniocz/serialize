@@ -7,3 +7,4 @@ __export(require("./decorators"));
 __export(require("./converters"));
 __export(require("./serializers"));
 __export(require("./type"));
+__export(require("./rxjs/deserialize-operators"));
