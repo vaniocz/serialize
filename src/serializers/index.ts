@@ -6,3 +6,4 @@ export * from './local-date-time.serializer';
 export * from './model.serializer';
 export * from './serializers.factory';
 export * from './primitive.serializer';
+export * from './json.serializer';

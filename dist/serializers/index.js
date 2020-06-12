@@ -10,3 +10,4 @@ __export(require("./local-date-time.serializer"));
 __export(require("./model.serializer"));
 __export(require("./serializers.factory"));
 __export(require("./primitive.serializer"));
+__export(require("./json.serializer"));
